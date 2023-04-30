@@ -15,17 +15,20 @@ const Hero = () => {
           <Col lg="6" md="6">
             <div className={`${classes.hero__content}`}>
               <SectionSubtitle subtitle="Hello" />
-              <h2 className="mt-3 mb-3">I&apos;m Muhibur Rahman</h2>
-              <h5 className="mb-4">Frontend Developer</h5>
+              <h2 className="mt-3 mb-3">I&apos;m Rishabh Kumar Gaud</h2>
+              <h5 className="mb-4">Full-Stack Engineer</h5>
               <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Impedit rem sint ipsa cumque. Atque rem vel iusto impedit omnis
-                quos!
+                I am highly motivated and dedicated to my work, with a keen eye
+                for detail and a passion for delivering high-quality results. I
+                am a quick learner and always eager to take on new challenges
+                and expand my skill set. I am committed to continuous
+                improvement and staying up-to-date with the latest industry
+                trends and best practices in software development.
               </p>
               <div className="mt-5">
-                <button className="primary__btn">
+                {/* <button className="primary__btn">
                   <Link href="#">Hire me</Link>
-                </button>
+                </button> */}
 
                 <button className="secondary__btn">
                   <Link href="#">Download CV</Link>
@@ -35,7 +38,7 @@ const Hero = () => {
           </Col>
 
           {/* ========== hero img ============= */}
-          <Col lg="6" md="6">
+          {/* <Col lg="6" md="6">
             <div className={`${classes.hero__img} text-end`}>
               <Image alt="hero-image" src={heroImg} width="400" height="400" />
 
@@ -73,7 +76,7 @@ const Hero = () => {
                 </div>
               </div>
             </div>
-          </Col>
+          </Col> */}
         </Row>
       </Container>
     </section>

@@ -94,7 +94,7 @@ const About = () => {
                     "https://drive.google.com/file/d/1QJryry-Pl9e-309kw0BD9CQAcLGgS5N_/view?usp=sharing"
                   }
                 >
-                  Download CV
+                  Download Resume
                 </Link>
               </button>
             </div>

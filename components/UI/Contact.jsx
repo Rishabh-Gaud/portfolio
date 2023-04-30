@@ -14,9 +14,8 @@ const Contact = () => {
             <SectionSubtitle subtitle="Contact me" />
             <h3 className="mt-4 mb-4">Contact with me</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
-              beatae ratione iusto cum. Doloremque suscipit eius provident error
-              labore est reprehenderit, exercitationem corrupti earum deleniti!
+              I have delivered great user experiences to people. Well-versed
+              with React, Javascript, and most of the Web frameworks.
             </p>
 
             <ul className={`${classes.contact__info__list}`}>
@@ -24,44 +23,44 @@ const Contact = () => {
                 <span>
                   <i className="ri-map-pin-line"></i>
                 </span>
-                <p>Sylhet - Bangladesh</p>
+                <p>Bangaluru, India</p>
               </li>
               <li className={`${classes.info__item}`}>
                 <span>
                   <i className="ri-mail-line"></i>
                 </span>
-                <p>muhib5532@gmail.com</p>
+                <p>rishabh.kumbh@gmail.com</p>
               </li>
               <li className={`${classes.info__item}`}>
                 <span>
                   <i className="ri-phone-line"></i>
                 </span>
-                <p>+088123456789</p>
+                <p>+918287233813</p>
               </li>
             </ul>
 
             <div className={`${classes.social__links}`}>
-              <Link href="#">
-                <i className="ri-youtube-line"></i>
-              </Link>
-              <Link href="#">
+              <Link href="https://github.com/Rishabh-Gaud/">
                 <i className="ri-github-line"></i>
               </Link>
-              <Link href="#">
-                <i className="ri-facebook-line"></i>
-              </Link>
-              <Link href="#">
+              <Link href="https://www.linkedin.com/in/rishabhgaud7800/">
                 <i className="ri-linkedin-line"></i>
               </Link>
-              <Link href="#">
-                <i className="ri-instagram-line"></i>
+              <Link href="https://twitter.com/GaudRishabh">
+                <i className="ri-twitter-line"></i>
+              </Link>
+              <Link href="https://www.youtube.com/@rishabhgaur2102/about">
+                <i className="ri-youtube-line"></i>
+              </Link>
+              <Link href="https://medium.com/@rishabh78150891">
+                <i className="ri-medium-line"></i>
               </Link>
             </div>
           </Col>
 
-          <Col lg="6" md="6">
+          {/* <Col lg="6" md="6">
             <Form />
-          </Col>
+          </Col> */}
         </Row>
       </Container>
     </section>

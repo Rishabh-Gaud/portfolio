@@ -31,7 +31,7 @@ const Hero = () => {
                 </button> */}
 
                 <button className="secondary__btn">
-                  <Link href="#">Download CV</Link>
+                  <Link target="_blank" href="https://drive.google.com/file/d/1QJryry-Pl9e-309kw0BD9CQAcLGgS5N_/view?usp=sharing">Download Resume</Link>
                 </button>
               </div>
             </div>

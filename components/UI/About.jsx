@@ -14,8 +14,10 @@ import classes from "../../styles/about.module.css";
 const About = () => {
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/example.pdf";
-    link.download = "example.pdf";
+    link.href =
+      "https://drive.google.com/file/d/1QJryry-Pl9e-309kw0BD9CQAcLGgS5N_/view?usp=sharing";
+    link.download =
+      "https://drive.google.com/file/d/1QJryry-Pl9e-309kw0BD9CQAcLGgS5N_/view?usp=sharing";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -29,11 +31,18 @@ const About = () => {
             <h3 className="mt-4">I&apos;m here</h3>
             <h3 className="mb-4">to help your next project</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
-              neque asperiores temporibus quo saepe odio, esse labore libero
-              obcaecati quidem explicabo blanditiis deleniti ex vitae ratione
-              ullam fugiat dicta eum sint officiis porro illum quia. Error quam
-              cum excepturi beatae.
+              I am a final year BTech student from NIT Srinagar with a passion
+              for software development. I have 6 months of experience as a
+              software development engineer and have worked on several projects
+              in various domains.
+            </p>
+            <p>
+              My technical skills include proficiency in C++, JavaScript, and
+              SQL. I am experienced in using various technologies and frameworks
+              such as NestJs, NextJs, Redis, HTML/CSS, Tailwind, React, Node,
+              Express, Postgres, and MongoDB. Additionally, I am experienced in
+              using developer tools and platforms such as Retool, Postman,
+              DBeaver, AWS s3, Google Analytics, Bitbucket, Github, and VS Code.
             </p>
 
             <div className=" d-flex align-items-center gap-5">
@@ -76,7 +85,17 @@ const About = () => {
               </button>
 
               <button className="secondary__btn">
-                <Link href="#">Download CV</Link>
+                <Link
+                target="_blank"
+                  href={
+                    "https://drive.google.com/file/d/1QJryry-Pl9e-309kw0BD9CQAcLGgS5N_/view?usp=sharing"
+                  }
+                  download={
+                    "https://drive.google.com/file/d/1QJryry-Pl9e-309kw0BD9CQAcLGgS5N_/view?usp=sharing"
+                  }
+                >
+                  Download Resume
+                </Link>
               </button>
             </div>
           </Col>

@@ -58,9 +58,9 @@ const Contact = () => {
             </div>
           </Col>
 
-          {/* <Col lg="6" md="6">
+          <Col lg="6" md="6">
             <Form />
-          </Col> */}
+          </Col>
         </Row>
       </Container>
     </section>

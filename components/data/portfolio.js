@@ -13,17 +13,17 @@ const portfolio = [
     title: "Encrypt response and show decrypt data...",
     img: "/images/wp3346590-technical-wallpapers.jpg",
     category: "Blogs",
-    keyword: ["Nodejs", "AES encryption", "Security", "crypto"],
+    keyword: ["Nodejs", "AES", "Security", "crypto"],
     liveUrl: "https://medium.com/p/f27a95b64673",
   },
 
   {
     id: "03",
-    title: "release soon",
-    img: "/images/wp2823528-technical-wallpapers.jpg",
+    title: "Enhancing Your Next.js App with an AI...",
+    img: "/images/chatgpt.jpeg",
     category: "Blogs",
-    keyword: ["Mobile", "App", "UI-UX"],
-    liveUrl: "#",
+    keyword: ["OpenAi", "Chatbot", "Nextjs"],
+    liveUrl: "https://medium.com/p/6bf3efc38ccd",
   },
 
   {

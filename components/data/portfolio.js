@@ -25,7 +25,14 @@ const portfolio = [
     keyword: ["OpenAi", "Chatbot", "Nextjs"],
     liveUrl: "https://medium.com/p/6bf3efc38ccd",
   },
-
+  {
+    id: "07",
+    title: "Healthcity",
+    img: "/images/mb.jpeg",
+    category: "Web Design",
+    keyword: ["Nestjs", "Nextsj", "AWS"],
+    liveUrl: "https://www.medibuddy.in/healthcity",
+  },
   {
     id: "04",
     title: "Portfolio Website",

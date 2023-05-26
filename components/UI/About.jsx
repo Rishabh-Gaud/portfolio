@@ -11,9 +11,9 @@ const About = () => {
   const handleDownload = () => {
     const link = document.createElement("a");
     link.href =
-      "https://drive.google.com/file/d/1QJryry-Pl9e-309kw0BD9CQAcLGgS5N_/view?usp=sharing";
+      "https://drive.google.com/file/d/1vXIBkfQTC4L9hGXE7raU-hnskxzgF1zn/view";
     link.download =
-      "https://drive.google.com/file/d/1QJryry-Pl9e-309kw0BD9CQAcLGgS5N_/view?usp=sharing";
+      "https://drive.google.com/file/d/1vXIBkfQTC4L9hGXE7raU-hnskxzgF1zn/view";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -84,10 +84,10 @@ const About = () => {
                 <Link
                 target="_blank"
                   href={
-                    "https://drive.google.com/file/d/1QJryry-Pl9e-309kw0BD9CQAcLGgS5N_/view?usp=sharing"
+                    "https://drive.google.com/file/d/1vXIBkfQTC4L9hGXE7raU-hnskxzgF1zn/view"
                   }
                   download={
-                    "https://drive.google.com/file/d/1QJryry-Pl9e-309kw0BD9CQAcLGgS5N_/view?usp=sharing"
+                    "https://drive.google.com/file/d/1vXIBkfQTC4L9hGXE7raU-hnskxzgF1zn/view"
                   }
                 >
                   Download Resume

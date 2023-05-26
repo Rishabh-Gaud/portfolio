@@ -12,7 +12,6 @@ const Work = () => {
           <Col className={`${classes.service__title}`}>
             <h3 className="mb-2 mt-4">Medibuddy</h3>
             <h4 className="mb-4">SDE Intern </h4>
-            <p>
               <ul>
                 <li>
                   Built Healthcity from scratch providing a platform for vendors
@@ -35,7 +34,6 @@ const Work = () => {
                   changing the banner
                 </li>
               </ul>
-            </p>
           </Col>
         </Row>
         <Row>
@@ -44,7 +42,6 @@ const Work = () => {
               Semicolon - coding club of NIT Srinagar
             </h3>
             <h4 className="mb-4">Tech Lead </h4>
-            <p>
               <ul>
                 <li>
                   Organized and executed multiple technical coding events like
@@ -61,7 +58,6 @@ const Work = () => {
                   discuss improvements.
                 </li>
               </ul>
-            </p>
           </Col>
         </Row>
       </Container>

@@ -1,7 +1,7 @@
 
 const { Configuration, OpenAIApi } = require("openai");
 const configuration = new Configuration({
-  apiKey: "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",
+  apiKey: "sk-secret key",
 });
 const openai = new OpenAIApi(configuration);
 export async function generatedText(formData){

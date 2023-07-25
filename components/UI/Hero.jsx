@@ -26,12 +26,13 @@ const Hero = () => {
                 trends and best practices in software development.
               </p>
               <div className="mt-5">
-                {/* <button className="primary__btn">
-                  <Link href="#">Hire me</Link>
-                </button> */}
+                <button className="primary__btn">
+                    <Link target="_blank" href="https://drive.google.com/file/d/1vXIBkfQTC4L9hGXE7raU-hnskxzgF1zn/view">Download Resume</Link>
+                 </button>
 
                 <button className="secondary__btn">
-                  <Link target="_blank" href="https://drive.google.com/file/d/1vXIBkfQTC4L9hGXE7raU-hnskxzgF1zn/view">Download Resume</Link>
+                  <Link target="_blank" href="https://drive.google.com/file/d/1vXIBkfQTC4L9hGXE7raU-hnskxzgF1zn/view">Cover Letter</Link>
+                 
                 </button>
               </div>
             </div>
@@ -70,6 +71,10 @@ const Hero = () => {
                 <span>
                   <i className="ri-lightbulb-flash-line"></i>
                 </span>
+                {/* <div className="bg-transparent">
+                  <h6>Experience</h6>
+                  <h5 className="mb-0">1 Years</h5>
+                </div> */}
                 <div className="bg-transparent">
                   <h6>Experience</h6>
                   <h5 className="mb-0">1 Years</h5>

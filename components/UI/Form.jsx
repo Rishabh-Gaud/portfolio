@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 import classes from "../../styles/form.module.css";
 import { sendEmail } from '../../util/sendEmail';
+import { generatedText } from "@/util/chatgpt";
+import Modal from "./Pop";
 
 
 const Form = () => {
+
+  const [showModal, setShowModal] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -15,11 +19,13 @@ const Form = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    sendEmail(formData);
-    setFormData({ name: '', email: '', message: '' });
+     sendEmail(formData);
+     setShowModal(true)
+    generatedText(formData);
+    // setFormData({ name: '', email: '', message: '' });
   };
   return (
-    <form className={`${classes.form}`} onSubmit={submitHandler}>
+    <form className={`${classes.form}`} onSubmit={submitHandler} >
       <div className={`${classes.form__group}`}>
         <input type="text" name="name" value={formData.name} onChange={handleChange} required placeholder="Your Name" />
       </div>
@@ -33,6 +39,11 @@ const Form = () => {
       <button className="primary__btn" type="submit">
         Send
       </button>
+        {showModal &&
+            <Modal onClose={() => setShowModal(false)}>
+                Hello from the modal!
+            </Modal>
+        }
     </form>
   );
 };

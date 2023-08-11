@@ -6,7 +6,21 @@ import PortfolioItem from "./PortfolioItem";
 
 import portfolioData from "../data/portfolio";
 
+
 const Portfolio = () => {
+  const axios = require('axios');
+
+axios({
+    method: 'get',
+    url: 'https://v1.nocodeapi.com/rishabhgaud/medium/mteSOTsClntYXNAe', 
+    params: {},
+}).then(function (response) {
+        // handle success
+        console.log(response.data);
+}).catch(function (error) {
+        // handle error
+        console.log(error);
+})
   const [filter, setFilter] = useState("Web Design");
   const [data, setData] = useState();
 

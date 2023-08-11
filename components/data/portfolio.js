@@ -34,6 +34,14 @@ const portfolio = [
     liveUrl: "https://www.medibuddy.in/healthcity",
   },
   {
+    id: "07",
+    title: "JobFod",
+    img: "/images/2206.jpg",
+    category: "Web Design",
+    keyword: ["Nextjs", "Python", "automation"],
+    liveUrl: "https://jobfod.vercel.app/30",
+  },
+  {
     id: "04",
     title: "Portfolio Website",
     img: "/images/portfolio-07.png",

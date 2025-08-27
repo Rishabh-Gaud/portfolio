@@ -19,26 +19,23 @@ const About = () => {
     document.body.removeChild(link);
   };
   return (
-    <section id="about">
+    <section id="about" aria-labelledby="about-heading">
       <Container>
         <Row>
           <Col lg="6" className={`${classes.about__content}`}>
             <SectionSubtitle subtitle="About me" />
-            <h3 className="mt-4">I&apos;m here</h3>
-            <h3 className="mb-4">to help your next project</h3>
+            <h2 id="about-heading" className="mt-4 mb-4">I&apos;m here to help your next project</h2>
             <p>
-              I am a final year BTech student from NIT Srinagar with a passion
-              for software development. I have 6 months of experience as a
-              software development engineer and have worked on several projects
-              in various domains.
+              I am a Software Development Engineer with a BTech in Electronics and Communication 
+              Engineering from NIT Srinagar (CGPA: 7.9). Currently working at CollegeIt since 
+              September 2023, I have 2+ years of experience building scalable web applications 
+              and AI-driven solutions.
             </p>
             <p>
-              My technical skills include proficiency in C++, JavaScript, and
-              SQL. I am experienced in using various technologies and frameworks
-              such as NestJs, NextJs, Redis, HTML/CSS, Tailwind, React, Node,
-              Express, Postgres, and MongoDB. Additionally, I am experienced in
-              using developer tools and platforms such as Retool, Postman,
-              DBeaver, AWS s3, Google Analytics, Bitbucket, Github, and VS Code.
+              I specialize in full-stack development with expertise in JavaScript, TypeScript, 
+              Python, React, Next.js, Node.js, and cloud technologies. I have successfully 
+              designed chat widgets for 10+ universities, built AI conversational applications 
+              that increased conversions by 450%, and developed platforms serving 1,000+ active users.
             </p>
 
             <div className=" d-flex align-items-center gap-5">
@@ -47,14 +44,14 @@ const About = () => {
                   <span className={`${classes.about__icon}`}>
                     <i className="ri-checkbox-circle-line"></i>
                   </span>
-                  Problem Solving
+                  AI & Machine Learning
                 </h6>
 
                 <h6 className=" d-flex align-items-center gap-2 mt-3 fw-normal">
                   <span className={`${classes.about__icon}`}>
                     <i className="ri-checkbox-circle-line"></i>
                   </span>
-                  Search A Lot
+                  Full-Stack Development
                 </h6>
               </div>
 
@@ -63,36 +60,31 @@ const About = () => {
                   <span className={`${classes.about__icon}`}>
                     <i className="ri-checkbox-circle-line"></i>
                   </span>
-                  Creative Idea
+                  Cloud & DevOps
                 </h6>
 
                 <h6 className=" d-flex align-items-center gap-2 mt-3 fw-normal">
                   <span className={`${classes.about__icon}`}>
                     <i className="ri-checkbox-circle-line"></i>
                   </span>
-                  High Quality
+                  Problem Solving
                 </h6>
               </div>
             </div>
 
-            <div className="mt-5">
-              <button className="primary__btn">
-                <Link href="#portfolio">My Portfolio</Link>
-              </button>
+            <div className="mt-5 d-flex gap-3 flex-wrap">
+              <Link href="#portfolio" className="primary__btn">
+                My Portfolio
+              </Link>
 
-              <button className="secondary__btn">
-                <Link
+              <Link 
+                href="https://drive.google.com/file/d/1vXIBkfQTC4L9hGXE7raU-hnskxzgF1zn/view"
                 target="_blank"
-                  href={
-                    "https://drive.google.com/file/d/1vXIBkfQTC4L9hGXE7raU-hnskxzgF1zn/view"
-                  }
-                  download={
-                    "https://drive.google.com/file/d/1vXIBkfQTC4L9hGXE7raU-hnskxzgF1zn/view"
-                  }
-                >
-                  Download Resume
-                </Link>
-              </button>
+                rel="noopener noreferrer"
+                className="secondary__btn"
+              >
+                Download Resume
+              </Link>
             </div>
           </Col>
 

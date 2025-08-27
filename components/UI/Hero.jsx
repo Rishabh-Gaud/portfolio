@@ -8,40 +8,129 @@ import classes from "../../styles/hero.module.css";
 
 const Hero = () => {
   return (
-    <section className={`${classes.hero}`}>
+    <section className={`${classes.hero}`} aria-labelledby="hero-heading">
       <Container>
         <Row>
           {/* ========== hero content ============= */}
           <Col lg="6" md="6">
             <div className={`${classes.hero__content}`}>
               <SectionSubtitle subtitle="Hello" />
-              <h2 className="mt-3 mb-3">I&apos;m Rishabh Kumar Gaud</h2>
-              <h5 className="mb-4">Full-Stack Engineer</h5>
+              <h1 id="hero-heading" className="mt-3 mb-3">I&apos;m Rishabh Kumar Gaud</h1>
+              <h2 className="mb-4">Software Development Engineer</h2>
               <p>
-                I am highly motivated and dedicated to my work, with a keen eye
-                for detail and a passion for delivering high-quality results. I
-                am a quick learner and always eager to take on new challenges
-                and expand my skill set. I am committed to continuous
-                improvement and staying up-to-date with the latest industry
-                trends and best practices in software development.
+                I am a passionate Software Development Engineer with expertise in React, Node.js, 
+                Next.js, and AI-driven applications. Currently working at CollegeIt, I have built 
+                chat widgets for 10+ universities and developed AI conversational applications that 
+                increased admission lead conversions by 450%. I excel in full-stack development, 
+                creating scalable solutions with modern technologies like Python, TypeScript, and AWS.
               </p>
               <div className="mt-5">
-                {/* <button className="primary__btn">
-                  <Link href="#">Hire me</Link>
-                </button> */}
-
-{/*                 <button className="secondary__btn">
-                  <Link target="_blank" href="https://drive.google.com/file/d/1vXIBkfQTC4L9hGXE7raU-hnskxzgF1zn/view">Download Resume</Link>
-                </button> */}
-                <h2>Connect with me</h2>
-<p align="left">
-<a href="https://linkedin.com/in/rishabhgaud7800" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="rishabhgaud7800" height="30" width="40" /></a>
-<a href="https://www.facebook.com/profile.php?id=100010337352255" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="rishabh gaud" height="30" width="40" /></a>
-<a href="https://instagram.com/riishabhgaud" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="riishabhgaud" height="30" width="40" /></a>
-<a href="https://www.hackerrank.com/rishabh78150891" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/hackerrank.svg" alt="rishabh78150891" height="30" width="40" /></a>
-<a href="https://www.leetcode.com/rishabh-gaud" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/leet-code.svg" alt="rishabh-gaud" height="30" width="40" /></a>
-<a href="https://discord.gg/Rishabh#9774" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/discord.svg" alt="Rishabh#9774" height="30" width="40" /></a>
-</p>
+                <div className="d-flex gap-3 mb-4">
+                  <Link href="/contact" className="primary__btn">
+                    Hire me
+                  </Link>
+                  <Link 
+                    target="_blank" 
+                    href="https://drive.google.com/file/d/1vXIBkfQTC4L9hGXE7raU-hnskxzgF1zn/view" 
+                    className="secondary__btn"
+                  >
+                    Download Resume
+                  </Link>
+                </div>
+                
+                <div className="social-links">
+                  <h3 className="mb-3">Connect with me</h3>
+                  <div className="d-flex gap-3 flex-wrap">
+                    <Link 
+                      href="https://linkedin.com/in/rishabhgaud7800" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="social-link social-link--linkedin"
+                      aria-label="LinkedIn Profile"
+                    >
+                      <i className="ri-linkedin-box-fill"></i>
+                    </Link>
+                    <Link 
+                      href="https://github.com/Rishabh-Gaud" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="social-link social-link--github"
+                      aria-label="GitHub Profile"
+                    >
+                      <i className="ri-github-fill"></i>
+                    </Link>
+                    <Link 
+                      href="https://twitter.com/GaudRishabh" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="social-link social-link--twitter"
+                      aria-label="Twitter Profile"
+                    >
+                      <i className="ri-twitter-fill"></i>
+                    </Link>
+                    <Link 
+                      href="https://instagram.com/riishabhgaud" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="social-link social-link--instagram"
+                      aria-label="Instagram Profile"
+                    >
+                      <i className="ri-instagram-fill"></i>
+                    </Link>
+                    <Link 
+                      href="https://medium.com/@gaudrishabh" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="social-link social-link--medium"
+                      aria-label="Medium Profile"
+                    >
+                      <i className="ri-medium-fill"></i>
+                    </Link>
+                    <Link 
+                      href="https://www.leetcode.com/rishabh_gaud/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="social-link social-link--leetcode"
+                      aria-label="LeetCode Profile"
+                    >
+                      <span className="social-link__text">LC</span>
+                    </Link>
+                    <Link 
+                      href="https://www.geeksforgeeks.org/user/rishabhgaud/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="social-link social-link--geeksforgeeks"
+                      aria-label="GeeksforGeeks Profile"
+                    >
+                      <span className="social-link__text">GfG</span>
+                    </Link>
+                    <Link 
+                      href="https://www.codechef.com/users/rishabh_gaud" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="social-link social-link--codechef"
+                      aria-label="CodeChef Profile"
+                    >
+                      <span className="social-link__text">CC</span>
+                    </Link>
+                    <Link 
+                      href="https://www.hackerrank.com/rishabh78150891" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="social-link social-link--hackerrank"
+                      aria-label="HackerRank Profile"
+                    >
+                      <span className="social-link__text">HR</span>
+                    </Link>
+                    <Link 
+                      href="mailto:rishabh.kumbh@gmail.com"
+                      className="social-link social-link--email"
+                      aria-label="Email Contact"
+                    >
+                      <i className="ri-mail-fill"></i>
+                    </Link>
+                  </div>
+                </div>
               </div>
             </div>
           </Col>
@@ -49,7 +138,16 @@ const Hero = () => {
           {/* ========== hero img ============= */}
           <Col lg="6" md="6">
             <div className={`${classes.hero__img} text-end`}>
-              <Image alt="hero-image" src={heroImg} width="400" height="400" />
+              <Image 
+                alt="Rishabh Kumar Gaud - Full-Stack Developer" 
+                src={heroImg} 
+                width="400" 
+                height="400" 
+                priority
+                placeholder="blur"
+                quality={90}
+                sizes="(max-width: 768px) 300px, (max-width: 1200px) 400px, 400px"
+              />
 
               <div className={`${classes.hero__skills}`}>
                 <h6>Skills</h6>
@@ -81,7 +179,7 @@ const Hero = () => {
                 </span>
                 <div className="bg-transparent">
                   <h6>Experience</h6>
-                  <h5 className="mb-0">1 Years</h5>
+                  <h5 className="mb-0">2+ Years</h5>
                 </div>
               </div>
             </div>

@@ -6,38 +6,17 @@ import PortfolioItem from "./PortfolioItem";
 
 import portfolioData from "../data/portfolio";
 
-
 const Portfolio = () => {
-  const axios = require('axios');
-
-axios({
-    method: 'get',
-    url: 'https://v1.nocodeapi.com/rishabhgaud/medium/mteSOTsClntYXNAe', 
-    params: {},
-}).then(function (response) {
-        // handle success
-        console.log(response.data);
-}).catch(function (error) {
-        // handle error
-        console.log(error);
-})
-  const [filter, setFilter] = useState("Web Design");
-  const [data, setData] = useState();
+  const [filter, setFilter] = useState("All");
+  const [data, setData] = useState(portfolioData);
 
   useEffect(() => {
-    if (filter === "Blogs") {
+    if (filter === "All") {
+      setData(portfolioData);
+    } else {
       const filteredData = portfolioData.filter(
         (item) => item.category === filter
       );
-
-      setData(filteredData);
-    }
-
-    if (filter === "Web Design") {
-      const filteredData = portfolioData.filter(
-        (item) => item.category === filter
-      );
-
       setData(filteredData);
     }
   }, [filter]);
@@ -45,75 +24,59 @@ axios({
   const active = `${classes.tab__btn__active}`;
 
   return (
-    <section id="portfolio">
-      {/* <Container>
-        <Row>
-          <Col lg="6" md="6" className="mb-5">
-            <SectionSubtitle subtitle=" My portfolio" />
-            <h4 className="mt-4">Some of my distinguished works</h4>
-          </Col>
-
-          <Col lg="6" md="6">
-            <div className={`${classes.tab__btns} text-end`}>
-              <button
-                className={` ${
-                  filter === "Blogs" ? active : ""
-                } secondary__btn text-white`}
-                onClick={() => setFilter("Blogs")}
-              >
-                Blogs
-              </button>
-              <button
-                className={`${
-                  filter === "Web Design" ? active : ""
-                } secondary__btn text-white`}
-                onClick={() => setFilter("Web Design")}
-              >
-                Web Design
-              </button>
-            </div>
-          </Col>
-
-          {data?.map((item) => (
-            <Col lg="4" md="4" sm="6" key={item.id}>
-              <PortfolioItem item={item} />
-            </Col>
-          ))}
-        </Row>
-      </Container> */}
+    <section id="portfolio" className={`${classes.portfolio__section}`}>
       <Container>
         <Row>
-          <Col lg="6" md="6" className="mb-5">
-            <SectionSubtitle subtitle=" My portfolio" />
-            <h4 className="mt-4">Project</h4>
+          <Col lg="12" className="text-center mb-5">
+            <SectionSubtitle subtitle="My Portfolio" />
+            <h2 className="mt-4 mb-4">Featured Projects</h2>
+            <p>Showcasing my latest work in AI, full-stack development, and innovative solutions</p>
           </Col>
-
-          <Col lg="6" md="6">
-            <div className={`${classes.tab__btns} text-end`}>
+        </Row>
+        
+        <Row>
+          <Col lg="12" className="mb-4">
+            <div className={`${classes.tab__btns} text-center`}>
               <button
-                className={`${
-                  filter === "Web Design" ? active : ""
-                } secondary__btn text-white`}
-                onClick={() => setFilter("Web Design")}
+                className={`${filter === "All" ? active : ""} ${classes.tab__btn}`}
+                onClick={() => setFilter("All")}
               >
-                Web Design
+                All Projects
               </button>
               <button
-                className={` ${
-                  filter === "Blogs" ? active : ""
-                } secondary__btn text-white`}
-                onClick={() => setFilter("Blogs")}
+                className={`${filter === "Web Application" ? active : ""} ${classes.tab__btn}`}
+                onClick={() => setFilter("Web Application")}
               >
-                Blogs
+                Web Apps
+              </button>
+              <button
+                className={`${filter === "AI Application" ? active : ""} ${classes.tab__btn}`}
+                onClick={() => setFilter("AI Application")}
+              >
+                AI Projects
+              </button>
+              <button
+                className={`${filter === "PWA" ? active : ""} ${classes.tab__btn}`}
+                onClick={() => setFilter("PWA")}
+              >
+                Mobile Apps
               </button>
             </div>
           </Col>
+        </Row>
 
-          {data?.map((item) => (
-            <Col lg="4" md="4" sm="6" key={item.id}>
-              <PortfolioItem item={item} />
+        <Row>
+          {data?.length > 0 ? (
+            data.map((item) => (
+              <Col lg="4" md="6" sm="12" key={item.id} className="mb-4">
+                <PortfolioItem item={item} />
+              </Col>
+            ))
+          ) : (
+            <Col lg="12" className="text-center">
+              <p>No projects found for this category.</p>
             </Col>
-          ))}
+          )}
         </Row>
       </Container>
     </section>

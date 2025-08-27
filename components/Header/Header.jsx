@@ -18,8 +18,16 @@ const NAV__LINK = [
     display: "Services",
   },
   {
+    path: "#work",
+    display: "Experience",
+  },
+  {
     path: "#portfolio",
     display: "Portfolio",
+  },
+  {
+    path: "#blog",
+    display: "Blog",
   },
   {
     path: "#contact",
@@ -52,36 +60,53 @@ const Header = () => {
   const toggleMenu = () =>
     menuRef.current.classList.toggle(`${classes.menu__active}`);
 
+  const handleNavClick = (e) => {
+    // Close mobile menu when a nav link is clicked
+    if (menuRef.current && menuRef.current.classList.contains(`${classes.menu__active}`)) {
+      menuRef.current.classList.remove(`${classes.menu__active}`);
+    }
+  };
+
   return (
     <header className={`${classes.header}`} ref={headerRef}>
       <Container>
         <div className={`${classes.nav__wrapper}`}>
           {/* ======== navigation logo ======== */}
           <div className={`${classes.logo}`}>
-            <h1>
-              <span>R</span>ishabh
-            </h1>
+            <Link href="/" onClick={handleNavClick}>
+              <h1>
+                <span>R</span>ishabh
+              </h1>
+            </Link>
           </div>
 
           {/* ========= nav menu =========== */}
           <div
             className={`${classes.navigation}`}
             ref={menuRef}
-            onClick={toggleMenu}
           >
             <div className={`${classes.nav__menu}`}>
               {NAV__LINK.map((item, index) => (
-                <Link href={item.path} key={index}>
+                <Link 
+                  href={item.path} 
+                  key={index} 
+                  onClick={handleNavClick}
+                  className={`${classes.nav__link}`}
+                >
                   {item.display}
                 </Link>
               ))}
 
               <div className={`${classes.nav__right}`}>
-                <p className=" d-flex align-items-center gap-2 mb-0">
-                  {" "}
-                  <i className="ri-phone-line"></i> +918287233813{" "}
+                <p className="d-flex align-items-center gap-2 mb-0">
+                  <i className="ri-phone-line"></i> +918287233813
                 </p>
               </div>
+            </div>
+            
+            {/* Close button for mobile menu */}
+            <div className={`${classes.mobile__close}`} onClick={toggleMenu}>
+              <i className="ri-close-line"></i>
             </div>
           </div>
 

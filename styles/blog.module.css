@@ -1,0 +1,13 @@
+.blog {
+  padding: 80px 0;
+}
+
+.blog h2 {
+  color: #fff;
+  font-weight: bold;
+}
+
+.blog p {
+  color: #808dad;
+  line-height: 1.6;
+}

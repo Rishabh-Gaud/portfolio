@@ -12,10 +12,11 @@ const Contact = () => {
         <Row>
           <Col lg="6" md="6">
             <SectionSubtitle subtitle="Contact me" />
-            <h3 className="mt-4 mb-4">Contact with me</h3>
+            <h3 className="mt-4 mb-4">Let&apos;s work together</h3>
             <p>
-              I have delivered great user experiences to people. Well-versed
-              with React, Javascript, and most of the Web frameworks.
+              I&apos;m a Software Development Engineer specializing in AI applications, 
+              full-stack development, and scalable cloud solutions. Currently building 
+              innovative solutions at CollegeIt for universities worldwide.
             </p>
 
             <ul className={`${classes.contact__info__list}`}>
@@ -23,7 +24,7 @@ const Contact = () => {
                 <span>
                   <i className="ri-map-pin-line"></i>
                 </span>
-                <p>Bangaluru, India</p>
+                <p>Jaunpur, Uttar Pradesh, India</p>
               </li>
               <li className={`${classes.info__item}`}>
                 <span>
@@ -40,20 +41,29 @@ const Contact = () => {
             </ul>
 
             <div className={`${classes.social__links}`}>
-              <Link href="https://github.com/Rishabh-Gaud/">
-                <i className="ri-github-line"></i>
+              <Link href="https://github.com/Rishabh-Gaud/" className={`${classes.social__link} ${classes.github}`}>
+                <i className="ri-github-fill"></i>
               </Link>
-              <Link href="https://www.linkedin.com/in/rishabhgaud7800/">
-                <i className="ri-linkedin-line"></i>
+              <Link href="https://www.linkedin.com/in/rishabhgaud7800/" className={`${classes.social__link} ${classes.linkedin}`}>
+                <i className="ri-linkedin-box-fill"></i>
               </Link>
-              <Link href="https://twitter.com/GaudRishabh">
-                <i className="ri-twitter-line"></i>
+              <Link href="https://twitter.com/GaudRishabh" className={`${classes.social__link} ${classes.twitter}`}>
+                <i className="ri-twitter-fill"></i>
               </Link>
-              <Link href="https://www.youtube.com/@rishabhgaur2102/about">
-                <i className="ri-youtube-line"></i>
+              <Link href="https://www.youtube.com/@rishabhgaur2102/about" className={`${classes.social__link} ${classes.youtube}`}>
+                <i className="ri-youtube-fill"></i>
               </Link>
-              <Link href="https://medium.com/@rishabh78150891">
-                <i className="ri-medium-line"></i>
+              <Link href="https://medium.com/@gaudrishabh" className={`${classes.social__link} ${classes.medium}`}>
+                <i className="ri-medium-fill"></i>
+              </Link>
+              <Link href="https://leetcode.com/rishabh_gaud/" className={`${classes.social__link} ${classes.leetcode}`}>
+                <span className={classes.leetcode__icon}>LC</span>
+              </Link>
+              <Link href="https://www.geeksforgeeks.org/user/rishabhgaud/" className={`${classes.social__link} ${classes.geeksforgeeks}`}>
+                <span className={classes.gfg__icon}>GfG</span>
+              </Link>
+              <Link href="https://www.codechef.com/users/rishabh_gaud" className={`${classes.social__link} ${classes.codechef}`}>
+                <span className={classes.codechef__icon}>CC</span>
               </Link>
             </div>
           </Col>

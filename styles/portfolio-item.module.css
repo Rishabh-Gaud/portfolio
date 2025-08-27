@@ -1,45 +1,105 @@
 .portfolio__item {
   background: #171f38;
-  padding: 0px 20px 20px 20px;
-  padding-top: 30px;
-  border-radius: 10px;
-  margin-bottom: 30px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #2a3441;
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-.portfolio__item h6 {
-  color: #01d293;
+.portfolio__item:hover {
+  transform: translateY(-8px);
+  border-color: #01d293;
+  box-shadow: 0 15px 40px rgba(1, 210, 147, 0.15);
+}
+
+.portfolio__img {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.portfolio__img img {
+  border-radius: 0;
+  transition: transform 0.3s ease;
+}
+
+.portfolio__item:hover .portfolio__img img {
+  transform: scale(1.05);
+}
+
+.portfolio__content {
+  padding: 25px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio__title {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  line-height: 1.4;
+  background: transparent;
+}
+
+.portfolio__keywords {
   margin-bottom: 20px;
   background: transparent;
 }
 
-.portfolio__img {
-  margin-top: 30px;
-
-  background: transparent;
-}
-
-.portfolio__img img {
-  border-radius: 10px;
-}
-
 .portfolio__keyword {
-  padding: 5px 10px;
-  color: #fff;
-  background: #808dad68;
-  font-size: 0.7rem;
-  margin-right: 10px;
-  border-radius: 5px;
+  padding: 4px 12px;
+  color: #0e1630;
+  background: #01d293;
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin-right: 8px;
+  margin-bottom: 5px;
+  border-radius: 12px;
+  display: inline-block;
 }
 
 .portfolio__live {
-  margin-left: -100px;
-  margin-top: 30px;
-  display: none;
+  margin-top: auto;
+  background: transparent;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
 }
 
 .portfolio__item:hover .portfolio__live {
-  margin-left: 0;
-  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.portfolio__live a {
+  background: #01d293 !important;
+  color: #0e1630 !important;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.portfolio__live a:hover {
+  background: #00b87a !important;
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.portfolio__live a i {
+  font-size: 0.85rem;
+  background: transparent;
 }
 
 @media only screen and (max-width: 576px) {

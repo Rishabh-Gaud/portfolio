@@ -1,8 +1,9 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 
 import { Container } from "reactstrap";
 import classes from "./header.module.css";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const NAV__LINK = [
   {
@@ -37,8 +38,9 @@ const NAV__LINK = [
 
 const Header = () => {
   const headerRef = useRef(null);
-
   const menuRef = useRef(null);
+  const router = useRouter();
+  const [activeSection, setActiveSection] = useState("/");
 
   const headerFunc = () => {
     if (
@@ -53,9 +55,12 @@ const Header = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", headerFunc);
+    
+    // Set active section based on current route
+    setActiveSection(router.pathname);
 
     return () => window.removeEventListener("scroll", headerFunc);
-  }, []);
+  }, [router.pathname]);
 
   const toggleMenu = () =>
     menuRef.current.classList.toggle(`${classes.menu__active}`);
@@ -91,7 +96,12 @@ const Header = () => {
                   href={item.path} 
                   key={index} 
                   onClick={handleNavClick}
-                  className={`${classes.nav__link}`}
+                  className={`${classes.nav__link} ${
+                    (activeSection === item.path || 
+                     (activeSection === "/" && item.path === "/")) 
+                    ? classes.active 
+                    : ""
+                  }`}
                 >
                   {item.display}
                 </Link>
@@ -102,11 +112,6 @@ const Header = () => {
                   <i className="ri-phone-line"></i> +918287233813
                 </p>
               </div>
-            </div>
-            
-            {/* Close button for mobile menu */}
-            <div className={`${classes.mobile__close}`} onClick={toggleMenu}>
-              <i className="ri-close-line"></i>
             </div>
           </div>
 

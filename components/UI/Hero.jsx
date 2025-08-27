@@ -122,13 +122,6 @@ const Hero = () => {
                     >
                       <span className="social-link__text">HR</span>
                     </Link>
-                    <Link 
-                      href="mailto:rishabh.kumbh@gmail.com"
-                      className="social-link social-link--email"
-                      aria-label="Email Contact"
-                    >
-                      <i className="ri-mail-fill"></i>
-                    </Link>
                   </div>
                 </div>
               </div>
